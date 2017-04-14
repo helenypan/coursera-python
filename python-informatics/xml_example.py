@@ -10,11 +10,13 @@ input = '''
         <user x="7">
             <id>009</id>
             <name>Brent</name>
-            </user>
-        </users>
-</stuff>'''
+        </user>
+    </users>
+</stuff>
+'''
 
 stuff = ET.fromstring(input)
+# stuff.findall("user") not working, because have to find from the first level, which is users.
 lst = stuff.findall('users/user')
 print 'User count:', len(lst)
 
