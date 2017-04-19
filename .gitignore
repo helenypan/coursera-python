@@ -1,3 +1,4 @@
 python-informatics/installing.py
 *.pyc
 hidden.*
+*.sqlite
