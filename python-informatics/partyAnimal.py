@@ -13,14 +13,17 @@ class PartyAnimal:
 	def __del__(self):
 		print "I am destructed", self.name, self.x
 
-an = PartyAnimal("Helen")
-an.party()
-an.party()
-an.party()
+class FootballFan(PartyAnimal):
+	points = 0
+	def touchdown(self):
+		self.points = self.points + 7 
+		self.party()
+		print self.name, "ponts",self.points
 
-ab = PartyAnimal("Wudong")
-ab.party()
-ab.party()
 
-# print "Type", type(an)
-# print "Dir",dir(an)
+s = PartyAnimal("Sally")
+s.party()
+
+j = FootballFan("Jim")
+j.party()
+j.touchdown()
