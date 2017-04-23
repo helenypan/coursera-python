@@ -11,7 +11,7 @@ This python scripts simply uses the python library geocoder, reads where.data an
 ### Script geodump.py
 This script reads the database and writes to the file where.js, using codecs and json python libraries. 
 ### Script geodump_geocoder.py
-Similar with geodump.py, this script uses io library to write to the file where.js.
+Similar to geodump.py, this script uses io library to write to the file where.js.
 
 ## Google Map Visualisation
 ### JSON Data in where.js
