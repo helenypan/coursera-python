@@ -107,8 +107,9 @@ while True:
         # document = urllib.urlopen(url, context=scontext)
 
         document = urllib.urlopen(url)
-
-        text = document.read()
+        #read() will read the whole document
+        text = document.read() 
+        # print text
         if document.getcode() != 200 :
             print "Error code=",document.getcode(), url
             break
@@ -177,8 +178,10 @@ while True:
         VALUES ( ?, ?, ?, ?, ?, ? )''', ( start, email, sent_at, subject, hdr, body))
 
     # Only commit every 50th record
-    # if (many % 50) == 0 : conn.commit() 
-    time.sleep(1)
+    if (many % 50) == 0 : 
+        print "commit every 50 messages",many
+        conn.commit() 
+    # time.sleep(1)
 
 conn.commit()
 cur.close()
